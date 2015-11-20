@@ -34,7 +34,7 @@ def index():
         return render_template('index.html')
     cakeday = get_cake_day(username)
     if cakeday:
-        return render_template('result.html', redditor=username,
+        return render_template('result.html', username=username,
                                cakeday=cakeday)
     return render_template('index.html', error_message=error_message)
 
