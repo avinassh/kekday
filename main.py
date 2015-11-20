@@ -28,11 +28,15 @@ def get_cake_day(username):
 
 @app.route('/')
 def index():
+    error_message = 'Redditor does not exist or Shadowbanned'
     username = request.values.get('username')
     if not username:
         return render_template('index.html')
     cakeday = get_cake_day(username)
-    return render_template('result.html', redditor=username, cakeday=cakeday)
+    if cakeday:
+        return render_template('result.html', redditor=username,
+                               cakeday=cakeday)
+    return render_template('index.html', error_message=error_message)
 
 if __name__ == '__main__':
     app.run(debug=True)
