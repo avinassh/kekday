@@ -1,7 +1,14 @@
 {% extends "base.html" %}
 
 {% block body %}
-<div class="ui stacked segment">
-<h3><a href="https://www.reddit.com/user/{{ username }}">/u/{{ username }}</a>'s Cake Day is On {{ cakeday }}</h3>
+<div class="ui middle aligned center aligned grid">
+	<div class="column">
+		<div class="result-box">
+			<h1 class="ui teal header">
+				<a href="https://www.reddit.com/user/{{ username }}">/u/{{ username }}</a>'s cake day is on {{ cakeday }}
+				<h5><a href="/">Check for another redditor</a></h5>
+			</h1>
+		</div>
+	</div>
 </div>
 {% endblock %}
