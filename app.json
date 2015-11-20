@@ -1,0 +1,21 @@
+{
+  "name": "kekday",
+  "description": "Find a Redditor's Cake Day",
+  "repository": "https://github.com/avinassh/kekday",
+  "keywords": ["python", "reddit", "praw", "prawoauth2"],
+  "logo": "https://raw.githubusercontent.com/avinassh/kekday/master/static/img/cake.png",
+  "env": {
+    "APP_KEY": {
+      "required": true
+    },
+    "APP_SECRET": {
+      "required": true
+    },
+    "ACCESS_TOKEN": {
+      "required": true
+    },
+    "REFRESH_TOKEN": {
+      "required": true
+    }
+  }
+}
