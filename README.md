@@ -7,3 +7,7 @@ This is a Flask web app to find cake day of any Redditor. For more details check
 ## License
 
 The mighty MIT License. Check `LICENSE` for more details.
+
+## Credits
+
+The cake icon is from [Find Icons](http://findicons.com/icon/37818/cake1?id=328972).
