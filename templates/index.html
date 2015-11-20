@@ -21,12 +21,11 @@
       </div>
       <div class="ui error message"></div>
     </form>
+    {% if error_message %}
+    <div class="ui negative message">
+      <h4>{{ error_message }}</h4>
+    </div>
+    {% endif %}
   </div>
 </div>
-{% if error_message %}
-<div class="ui negative message">
-  <h4>{{ error_message }}</h4>
-</div>
-{% endif %}
-
 {% endblock %}
