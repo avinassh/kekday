@@ -22,7 +22,6 @@ def get_cake_day(username):
         created_on = datetime.utcfromtimestamp(redditor.created_utc)
     except praw.errors.NotFound:
         return False
-    oauth_helper.refresh()
     return(humanize.naturalday(created_on))
 
 
