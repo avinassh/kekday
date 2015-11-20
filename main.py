@@ -1,4 +1,6 @@
 import praw
+import humanize
+from datetime import datetime
 from flask import Flask
 from flask import request, render_template
 from prawoauth2 import PrawOAuth2Mini
@@ -11,8 +13,17 @@ oauth_helper = PrawOAuth2Mini(reddit_client, app_key=app_key,
                               app_secret=app_secret,
                               access_token=access_token,
                               refresh_token=refresh_token, scopes=scopes)
-
 app = Flask(__name__)
+
+
+def get_cake_day(username):
+    redditor = reddit_client.get_redditor(username)
+    try:
+        created_on = datetime.utcfromtimestamp(redditor.created_utc)
+    except praw.errors.NotFound:
+        return False
+    oauth_helper.refresh()
+    return(humanize.naturalday(created_on))
 
 
 @app.route('/')
