@@ -1,5 +1,5 @@
 praw==3.3.0
-Flask==1.0
+Flask==2.3.2
 humanize==0.5.1
 prawoauth2==0.2.1
 gunicorn==19.5.0
